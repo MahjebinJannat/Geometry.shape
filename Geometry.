@@ -1,0 +1,85 @@
+def rectangle_perimeter(l, w):
+    return 2 * (l + w)
+
+def rectangle_area(l, w):
+    return l * w
+
+def circle_perimeter(r):
+    return 2 * math.pi * r
+
+def circle_area(r):
+    return math.pi * r ** 2
+
+def parallelogram_perimeter(h, b):
+    return 2 * (h + b)
+
+def parallelogram_area(h, b):
+    return h * b
+
+def trapezoid_perimeter(a, b, c, d):
+    return a + b + c + d
+
+def trapezoid_area(a, b, h):
+    return 0.5 * (a + b) * h
+
+def triangle_perimeter(a, b, c):
+    return a + b + c
+
+def triangle_area(b, h):
+    return 0.5 * b * h
+
+def cylinder_area(r, h):
+    return 2 * math.pi * r * h + 2 * math.pi * r ** 2
+
+def cylinder_volume(r, h):
+    return math.pi * r ** 2 * h
+
+def sphere_area(r):
+    return 4 * math.pi * r ** 2
+
+def sphere_volume(r):
+    return 4 / 3 * math.pi * r ** 3
+
+def cone_area(r, s):
+    return math.pi * r ** 2 + math.pi * r * s
+
+def cone_volume(r, h):
+    return math.pi * r ** 2 * h / 3
+
+def square_based_pyramid_area(b, s):
+    return b ** 2 + b * s * 4
+
+def square_based_pyramid_volume(b, h):
+    return b ** 2 * h / 3
+
+def rectangular_prism_area(l, w, h):
+    return 2 * (w * h + l * w + l * h)
+
+def rectangular_prism_volume(l, w, h):
+    return l * w * h
+
+def triangular_prism_area(a, b, c, l, h):
+    return a * h + b * h + c * h + b * l
+
+def triangular_prism_volume(b, l, h):
+    return b * h * l / 2
+
+shape = int(input("Enter\n1 for Rectangle\n2 for Circle\n3 for Parallelogram\n4 for Trapezoid\n5 for Triangle\n6 for Cylinder\n7 for Sphere\n8 for Cone\n9 for Square-based pyramid\n10 for Rectangular prism\n11 for Triangular prism\n"))
+
+if shape == 1:
+    l, w = map(float, input("Enter length and width : ").split())
+    print(f"Perimeter of rectangle : {rectangle_perimeter(l, w)}")
+    print(f"Area of rectangle : {rectangle_area(l, w)}")
+elif shape == 2:
+    r = float(input("Enter radius : "))
+    print(f"Perimeter of circle : {circle_perimeter(r)}")
+    print(f"Area of circle : {circle_area(r)}")
+elif shape == 3:
+    h, b = map(float, input("Enter height and base : ").split())
+    print(f"Perimeter of parallelogram : {parallelogram_perimeter(h, b)}")
+    print(f"Area of parallelogram : {parallelogram_area(h, b)}")
+elif shape == 4:
+    a, b, c, d = map(float, input("Enter 4 side lengths : ").split())
+    print(f"Perimeter of trapezoid : {trapezoid_perimeter(a, b, c, d)}")
+    a, b, h = map(float, input("Enter 2 parallel sides and height : ").split())
+    print(f"Area of trapezoid : {trapezoid_area
